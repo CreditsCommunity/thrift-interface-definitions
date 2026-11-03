@@ -264,7 +264,8 @@ struct NodeInfo
     7: optional list<string> blackListContent
     8: optional list<BootstrapNode> bootstrap
     // CreditsCommunity node: chain identifier, the first 8 bytes of the hash of block 1 as uint64 (BlockChain::uuid()),
-    // the same on every node of a network; not set while the node does not know it yet
+    // the same on every node of a network; not set while the node does not know it yet.
+    // Sent as the same 64 bits in an i64: mainnet 11024959585341937636 arrives as -7421784488367613980
     9: optional i64 networkUuid
     // CreditsCommunity node: package version, the first line of the VERSION file, e.g. 4.2.532-community.17
     10: optional string communityVersion
